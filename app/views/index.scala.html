@@ -1,0 +1,21 @@
+@import model.forms.UserDataForm
+
+@(
+    title: String,
+    form: Form[UserDataForm],
+    countries: Seq[(String, String)]
+)(
+    implicit
+    messages: Messages
+)
+
+@main(title) {
+    @container(
+        title = messages("main.header")
+    ) {
+       @userForm(
+           form = form,
+           countries = countries
+       )
+    }
+}

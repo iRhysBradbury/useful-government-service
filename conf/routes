@@ -1,0 +1,4 @@
+# Routes
+GET     /               controllers.IndexController.index
+GET     /secondary      controllers.SecondaryController.secondary(name: String)
+POST    /user           controllers.UserDataController.create

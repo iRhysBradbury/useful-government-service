@@ -1,0 +1,17 @@
+@(
+    title: String,
+    userName: String
+)(
+    implicit
+    messages: Messages
+)
+
+@main(title) {
+    @container(
+        title = messages("secondary.header")
+    ) {
+       <h2>
+           @userName @messages("secondary.message")
+       </h2>
+    }
+}

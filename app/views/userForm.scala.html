@@ -1,0 +1,39 @@
+@import model.forms.UserDataForm
+
+@(
+    form: Form[UserDataForm],
+    countries: Seq[(String, String)]
+)(
+    implicit
+    messages: Messages
+)
+
+@helper.form(action = routes.UserDataController.create) {
+    @helper.inputText(
+        form(UserDataForm.Fields.name),
+        'required -> "required",
+        'label -> messages("form.label.name")
+    )
+    @helper.inputText(
+        form(UserDataForm.Fields.age),
+        'required -> "required",
+        'type -> "number",
+        'label -> messages("form.label.age")
+    )
+    @helper.select(
+        form(UserDataForm.Fields.sex),
+        options = Seq(
+            "male" -> messages("form.label.sex.male"),
+            "female" -> messages("form.label.sex.female")
+        ),
+        'required -> "required",
+        'label -> messages("form.label.sex")
+    )
+    @helper.select(
+        form(UserDataForm.Fields.country),
+        options = countries,
+        'required -> "required",
+        'label -> messages("form.label.country")
+    )
+    <button type="submit">@messages("form.buttom.submit")</button>
+}

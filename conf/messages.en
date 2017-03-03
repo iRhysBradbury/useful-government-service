@@ -1,0 +1,15 @@
+index.title = A Web Page
+
+main.header = Some Useful Government Service
+
+secondary.header = Application Complete
+secondary.message = Thankyou for applying to this useful service.
+
+form.label.name = Name
+form.label.sex = Sex
+form.label.sex.male = Male
+form.label.sex.female = Female
+form.label.age = Age
+form.label.country = Country
+
+form.buttom.submit = Apply

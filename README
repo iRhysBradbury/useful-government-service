@@ -1,0 +1,6 @@
+Play Scala App
+
+sbt run
+sbt test
+
+localhost:9000
